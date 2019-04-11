@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class MeleeSystem : MonoBehaviour
 {
-    public int TheDammage = 50;
+    public int TheDamage = 50;
+    public float MaxDistance = 1.5f;
+    public Animator anim;
 
     public float Distance; // how far away the ennemy is
 
@@ -19,11 +21,15 @@ public class MeleeSystem : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
+            anim.SetTrigger("Attack");
+
             RaycastHit hit;
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit))
             {
                 Distance = hit.distance;
-                hit.transform.SendMessage("ApplyDamage", TheDammage);
+                if (Distance < MaxDistance) {
+                    hit.transform.SendMessage("ApplyDamage", TheDamage);
+                }
             }
         }
     }
