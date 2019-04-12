@@ -21,8 +21,10 @@ public class MeleeSystem : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
+            // Attack animation
             anim.SetTrigger("Attack");
 
+            // Attack itself
             RaycastHit hit;
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit))
             {
@@ -31,6 +33,16 @@ public class MeleeSystem : MonoBehaviour
                     hit.transform.SendMessage("ApplyDamage", TheDamage);
                 }
             }
+        }
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            anim.CrossFade("Sprint", 0);
+        }
+
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            anim.CrossFade("Idle", 0);
         }
     }
 }
