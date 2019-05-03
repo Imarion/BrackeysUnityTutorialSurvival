@@ -7,6 +7,7 @@ public class MeleeSystem : MonoBehaviour
     public int TheDamage = 50;
     public float MaxDistance = 1.5f;
     public Animator anim;
+    public Transform TheSystem;
 
     public float Distance; // how far away the ennemy is
 
@@ -26,7 +27,7 @@ public class MeleeSystem : MonoBehaviour
 
             // Attack itself
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit))
+            if (Physics.Raycast(TheSystem.transform.position, TheSystem.transform.TransformDirection(Vector3.forward), out hit))
             {
                 Distance = hit.distance;
                 if (Distance < MaxDistance) {
