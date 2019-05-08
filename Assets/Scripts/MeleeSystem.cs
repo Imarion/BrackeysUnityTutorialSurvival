@@ -24,16 +24,6 @@ public class MeleeSystem : MonoBehaviour
         {
             // Attack animation
             anim.SetTrigger("Attack");
-
-            // Attack itself
-            RaycastHit hit;
-            if (Physics.Raycast(TheSystem.transform.position, TheSystem.transform.TransformDirection(Vector3.forward), out hit))
-            {
-                Distance = hit.distance;
-                if (Distance < MaxDistance) {
-                    hit.transform.SendMessage("ApplyDamage", TheDamage);
-                }
-            }
         }
 
         if (Input.GetKey(KeyCode.LeftShift))
@@ -44,6 +34,19 @@ public class MeleeSystem : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             anim.CrossFade("Idle", 0);
+        }
+    }
+
+    public void AttackDamage()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(TheSystem.transform.position, TheSystem.transform.TransformDirection(Vector3.forward), out hit))
+        {
+            Distance = hit.distance;
+            if (Distance < MaxDistance)
+            {
+                hit.transform.SendMessage("ApplyDamage", TheDamage);
+            }
         }
     }
 }
