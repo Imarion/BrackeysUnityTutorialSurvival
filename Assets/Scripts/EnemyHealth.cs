@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyLogic : MonoBehaviour
+public class EnemyHealth : MonoBehaviour
 {
     public int Health = 100;
 

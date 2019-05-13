@@ -1006,6 +1006,7 @@ GameObject:
   - component: {fileID: 987047068}
   - component: {fileID: 987047067}
   - component: {fileID: 987047071}
+  - component: {fileID: 987047072}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -1099,6 +1100,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 100
+--- !u!114 &987047072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987047066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 173359cc72964ae499ce355f72bb353c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Distance: 0
+  Target: {fileID: 1599189127}
+  lookAtDistance: 8
+  attackRange: 5
+  moveSpeed: 3
+  Damping: 6
 --- !u!1001 &1287320948
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1174,6 +1193,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1604220126}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1599189127 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1604220126}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1604220126
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1184,6 +1209,11 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8296172668803078736, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4270282157450953027, guid: 5e9e851c0e142814dac026a256ba2ac0,
         type: 3}
@@ -1234,10 +1264,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8296172668803078736, guid: 5e9e851c0e142814dac026a256ba2ac0,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 14300000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_Height
+      value: 2.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.26
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
