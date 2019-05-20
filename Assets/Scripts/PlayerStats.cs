@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHealth : MonoBehaviour
+public class PlayerStats : MonoBehaviour
 {
+
     public int Health = 100;
 
     // Start is called before the first frame update
@@ -15,10 +16,11 @@ public class EnemyHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
-    public void ApplyDamage(int TheDamage) {
+    public void ApplyDamage(int TheDamage)
+    {
         Health -= TheDamage;
         if (Health <= 0)
         {
@@ -26,7 +28,8 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    void Dead() {
-        Destroy(gameObject);
+    void Dead()
+    {
+        Debug.Log("Player died");
     }
 }

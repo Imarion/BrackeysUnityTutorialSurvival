@@ -11,7 +11,9 @@ public class AdvancedAI : MonoBehaviour
     public float attackRange = 1.5f;
     public float moveSpeed = 2.0f;
     public float Damping = 6.0f;
-    public float attackRepeatTime = 1.0f;    
+    public float attackRepeatTime = 1.0f;
+
+    public int TheDamage = 40;
 
     public CharacterController controller;
     public float gravity = 20.0f;
@@ -71,7 +73,8 @@ public class AdvancedAI : MonoBehaviour
     private void attack() {
         if (Time.time > attackTime)
         {
-            Debug.Log("attacking");
+            Target.SendMessage("ApplyDamage", TheDamage, SendMessageOptions.DontRequireReceiver);
+            Debug.Log("The ennemy has attacked");
             attackTime = Time.time + attackRepeatTime;
         }
     }
