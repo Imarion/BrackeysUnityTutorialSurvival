@@ -30,6 +30,7 @@ public class PlayerStats : MonoBehaviour
 
     void Dead()
     {
+        RespawnMenu.playerIsDead = true;
         Debug.Log("Player died");
     }
 }
