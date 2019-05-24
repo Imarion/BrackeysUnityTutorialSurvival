@@ -33,22 +33,27 @@ public class AdvancedAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Distance = Vector3.Distance(Target.position, transform.position);
-        if (Distance < lookAtDistance)
-        {            
-            lookAt();
-        }
-
-        if (Distance > lookAtDistance)
+        if (RespawnMenu.playerIsDead == false)
         {
-            mr.material.color = Color.green;
-        }
+            Distance = Vector3.Distance(Target.position, transform.position);
+            if (Distance < lookAtDistance)
+            {
+                lookAt();
+            }
 
-        if (Distance < attackRange) {
-            attack();
-        }
-        else if (Distance < chaseRange) {            
-            chase();
+            if (Distance > lookAtDistance)
+            {
+                mr.material.color = Color.green;
+            }
+
+            if (Distance < attackRange)
+            {
+                attack();
+            }
+            else if (Distance < chaseRange)
+            {
+                chase();
+            }
         }
     }
 

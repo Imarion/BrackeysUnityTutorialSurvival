@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-
-    public int Health = 100;
+    public int maxHealth = 100;
+    public int Health;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        Health = maxHealth;
     }
 
     // Update is called once per frame
@@ -32,5 +32,11 @@ public class PlayerStats : MonoBehaviour
     {
         RespawnMenu.playerIsDead = true;
         Debug.Log("Player died");
+    }
+
+    void RespawnStats()
+    {
+        Debug.Log("RespawnStats received");
+        Health = maxHealth;
     }
 }
