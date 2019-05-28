@@ -34,12 +34,21 @@ public class TOD : MonoBehaviour
     public Color SunNight;
     public Color SunDay;
 
+    // Added in episode 24: water color.
+    // Uncheck "IncludeWater" to deactivate.
+    public bool IncludeWater = false;
+    public GameObject Water;
+    public Color WaterNight;
+    public Color WaterDay;
+
+    private Renderer WaterRenderer;
+
     private float Tod;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        WaterRenderer = Water.GetComponent<Renderer>();
     }
 
     // Update is called once per frame
@@ -62,6 +71,11 @@ public class TOD : MonoBehaviour
         sun.transform.localEulerAngles = new Vector3((slider * 360) - 90, 0, 0);
         slider = slider + Time.deltaTime / speed;
         sun.color = Color.Lerp(SunNight, SunDay, slider * 2);
+        // Added in episode 24: water color.
+        // Uncheck "IncludeWater" to deactivate.
+        if (IncludeWater == true) {
+            WaterRenderer.material.SetColor("_horizonColor", Color.Lerp(WaterNight, WaterDay, slider2 * 2.0f - 0.2f));
+        }
 
         if (slider < 0.5f)
         {
