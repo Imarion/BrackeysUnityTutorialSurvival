@@ -1881,6 +1881,18 @@ PrefabInstance:
       propertyPath: speed
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: c6b0819bb42722b40be561c32c3e0592, type: 3}
+      propertyPath: WaterDay.r
+      value: 0.62588996
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: c6b0819bb42722b40be561c32c3e0592, type: 3}
+      propertyPath: WaterDay.g
+      value: 0.8765336
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: c6b0819bb42722b40be561c32c3e0592, type: 3}
+      propertyPath: WaterDay.b
+      value: 0.9150943
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6b0819bb42722b40be561c32c3e0592, type: 3}
 --- !u!1 &1409083289 stripped
