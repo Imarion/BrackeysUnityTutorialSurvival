@@ -27,10 +27,15 @@ ModelImporter:
   - first:
       74: -472583207363285103
     second: Swing02
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Base
+    second: {fileID: 2100000, guid: e99a03302755b56408c7d985befc3556, type: 2}
   materials:
     importMaterials: 1
-    materialName: 0
+    materialName: 1
     materialSearch: 1
     materialLocation: 1
   animations:
@@ -88,7 +93,7 @@ ModelImporter:
       name: Idle
       takeName: Idle
       internalID: -3100369314251171874
-      firstFrame: -1
+      firstFrame: 0
       lastFrame: 309
       wrapMode: 0
       orientationOffsetY: 0
@@ -96,8 +101,8 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
+      loopTime: 1
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -117,7 +122,7 @@ ModelImporter:
       name: IdleWithWeapon
       takeName: IdleWithWeapon
       internalID: -5268498920197377193
-      firstFrame: -1
+      firstFrame: 0
       lastFrame: 49
       wrapMode: 0
       orientationOffsetY: 0
@@ -125,8 +130,8 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
+      loopTime: 1
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -146,7 +151,7 @@ ModelImporter:
       name: PunchLeft
       takeName: PunchLeft
       internalID: -4529440302839410946
-      firstFrame: -1
+      firstFrame: 0
       lastFrame: 25
       wrapMode: 0
       orientationOffsetY: 0
@@ -154,8 +159,8 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
+      loopTime: 1
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -175,7 +180,7 @@ ModelImporter:
       name: PunchRight
       takeName: PunchRight
       internalID: -1628610361925504437
-      firstFrame: -1
+      firstFrame: 0
       lastFrame: 28
       wrapMode: 0
       orientationOffsetY: 0
@@ -183,8 +188,8 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
+      loopTime: 1
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -204,7 +209,7 @@ ModelImporter:
       name: Run
       takeName: Run
       internalID: 5522812681064789136
-      firstFrame: -1
+      firstFrame: 0
       lastFrame: 30
       wrapMode: 0
       orientationOffsetY: 0
@@ -212,8 +217,8 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
+      loopTime: 1
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -233,7 +238,7 @@ ModelImporter:
       name: Swing01
       takeName: Swing01
       internalID: 8781772216170401836
-      firstFrame: -1
+      firstFrame: 0
       lastFrame: 30
       wrapMode: 0
       orientationOffsetY: 0
@@ -262,7 +267,7 @@ ModelImporter:
       name: Swing02
       takeName: Swing02
       internalID: -472583207363285103
-      firstFrame: -1
+      firstFrame: 0
       lastFrame: 26
       wrapMode: 0
       orientationOffsetY: 0
@@ -313,7 +318,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -337,7 +342,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: 
+    rootMotionBoneName: Master
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
