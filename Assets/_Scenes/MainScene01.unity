@@ -2204,6 +2204,11 @@ PrefabInstance:
       propertyPath: respawnTransform
       value: 
       objectReference: {fileID: 1532908322}
+    - target: {fileID: 3166231813482782871, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
 --- !u!1 &1671609805 stripped
