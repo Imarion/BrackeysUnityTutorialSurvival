@@ -188,7 +188,7 @@ public class FPSWalkerEnhanced : MonoBehaviour
     // have hitpoints and remove some of them based on the distance fallen, add sound effects, etc.
     void ApplyFallingDamage(float fallDistance)
     {
-        gameObject.SendMessage("ApplyDammage", fallDistance * fallingDamageMultiplier);
+        gameObject.SendMessage("ApplyDamage", fallDistance * fallingDamageMultiplier);
         Debug.Log("Ouch! Fell " + fallDistance + " units!");
     }
 
